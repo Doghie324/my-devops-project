@@ -1,4 +1,4 @@
-name: Run hello script and tests
+name: Run hello script, tests, and Docker build
 
 on:
   push:
@@ -16,3 +16,5 @@ jobs:
         run: python hello.py
       - name: Run tests
         run: python -m unittest
+      - name: Build Docker image
+        run: docker build -t my-devops-project .
